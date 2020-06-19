@@ -47,10 +47,15 @@ let monthlyRate = numerator/denominator;
 
 If your name is `Oscar` mortgageCalculator() should return "Oscar, your monthly rate is 1073.64"
 */
+function mortgageCalculator(){
+    let n1 = Math.pow((1 + monthlyInterestRate), periods);
+    let numerator = principal * n1 * monthlyInterestRate;
+    let denominator = n1 - 1;
+    let monthlyRate = numerator/denominator;
+    console.log(name, ", your monthly rate is ", monthlyRate)
+}
 
-
-
-
+mortgageCalculator()
 
 // 🏡 Task 4: Arguments and Parameters
 /* Substitute the variables in your functions for parameters such that you can substitute `P`, `I`, and `N` when you call the function.
