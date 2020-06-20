@@ -128,14 +128,13 @@ function variableInterestRate(P, I, N){
     I = I - 0.025;
     for(x = 0; x < 9; x++){
     I = I + 0.005;
-    I = I.toFixed(2);
     let monthlyInterestRate = I / 12;
     let n1 = Math.pow((1 + monthlyInterestRate), N);
     let numerator = P * n1 * monthlyInterestRate;
     let denominator = n1 - 1;
     let monthlyRate = numerator/denominator;
     monthlyRate = Math.round(monthlyRate)
-    console.log(`${name}, with an interest rate of ${I}, your monthly rate is $${monthlyRate}`);
+    console.log(`${name}, with an interest rate of ${I.toFixed(3)}, your monthly rate is $${monthlyRate}`);
     }
 }
 
