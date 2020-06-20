@@ -4,9 +4,9 @@
 /* Create variables for principal, interest rate, and years. Assign them the values 200000, 0.05, and 30 respectively. Create another value called name and give it the value of your own name.
 */
 
-// const principal = 200000;
-// let interestRate = 0.05;
-// const years = 30;
+const principal = 200000;
+let interestRate = 0.05;
+const years = 30;
 
 const name = "Alan";
 
@@ -52,13 +52,13 @@ If your name is `Oscar` mortgageCalculator() should return "Oscar, your monthly 
 */
 
 
-// function mortgageCalculator(){
-//     let n1 = Math.pow((1 + monthlyInterestRate), periods);
-//     let numerator = principal * n1 * monthlyInterestRate;
-//     let denominator = n1 - 1;
-//     const monthlyRate = numerator/denominator;
-//     console.log(name, ", your monthly rate is ", monthlyRate)
-// }
+function mortgageCalculator(){
+    let n1 = Math.pow((1 + monthlyInterestRate), periods);
+    let numerator = principal * n1 * monthlyInterestRate;
+    let denominator = n1 - 1;
+    const monthlyRate = numerator/denominator;
+    console.log(name, ", your monthly rate is ", monthlyRate)
+}
 
 
 // 🏡 Task 4: Arguments and Parameters
@@ -68,15 +68,15 @@ For example,
 mortgageCalculator(200000, 0.05, 30); <-- should return 1,073.64
 */
 
-// function mortgageCalculator(P, I, N){
-//     N = N * 12;
-//     let monthlyInterestRate = I / 12;
-//     let n1 = Math.pow((1 + monthlyInterestRate), N);
-//     let numerator = P * n1 * monthlyInterestRate;
-//     let denominator = n1 - 1;
-//     const monthlyRate = numerator/denominator;
-//     console.log(name, ", your monthly rate is ", monthlyRate)
-// }
+function mortgageCalculator(P, I, N){
+    N = N * 12;
+    let monthlyInterestRate = I / 12;
+    let n1 = Math.pow((1 + monthlyInterestRate), N);
+    let numerator = P * n1 * monthlyInterestRate;
+    let denominator = n1 - 1;
+    const monthlyRate = numerator/denominator;
+    console.log(name, ", your monthly rate is ", monthlyRate)
+}
 
 // mortgageCalculator(200000, 0.05, 30);
 
